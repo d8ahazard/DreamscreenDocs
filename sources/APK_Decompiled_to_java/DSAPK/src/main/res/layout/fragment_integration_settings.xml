@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:scrollbarSize="2dp" android:scrollbarThumbVertical="@drawable/scrollbar" android:scrollbarStyle="outsideOverlay" android:layout_width="match_parent" android:layout_height="match_parent" android:fadeScrollbars="false">
+        <LinearLayout android:orientation="vertical" android:paddingTop="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true">
+            <TextView android:textSize="18sp" android:textStyle="normal" android:textColor="#ffffff" android:layout_gravity="left" android:id="@+id/headerText" android:paddingLeft="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/IntegrationSettings"/>
+            <View android:background="@color/lightDividerColor" android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="9dp" android:layout_marginBottom="9dp"/>
+            <LinearLayout android:orientation="vertical" android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="15sp" android:textColor="#ffffff" android:id="@+id/accountText1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/DreamScreenAccount"/>
+                <TextView android:textSize="15sp" android:textColor="@color/secondaryLightTextColor" android:layout_gravity="center" android:id="@+id/accountText2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="9dp" android:text="@string/integrationDirectionsText"/>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp">
+                    <LinearLayout android:orientation="horizontal" android:id="@+id/accountLoginLayout" android:padding="6dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <ImageView android:id="@+id/accountImage" android:layout_width="36dp" android:layout_height="36dp" android:layout_marginRight="12dp" app:srcCompat="@drawable/ic_account_circle_white_36dp"/>
+                        <TextView android:textSize="15sp" android:textColor="#ffffff" android:gravity="center_horizontal" android:id="@+id/accountImageText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/LinkThisConnect" android:lines="2"/>
+                    </LinearLayout>
+                    <TextView android:textSize="15sp" android:textColor="#ffffff" android:id="@+id/emailText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="12dp" android:maxLines="2"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View android:background="@color/lightDividerColor" android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="9dp" android:layout_marginBottom="9dp"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/alexaLayout" android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="15sp" android:textColor="#ffffff" android:layout_gravity="center_vertical" android:id="@+id/alexaText1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/AmazonAlexa"/>
+                    <ImageView android:id="@+id/alexaIcon" android:layout_width="wrap_content" android:layout_height="36dp" android:layout_marginLeft="16dp" app:srcCompat="@drawable/alexa_icon2" android:scaleType="fitCenter" android:adjustViewBounds="true"/>
+                </LinearLayout>
+                <TextView android:textSize="15sp" android:textColor="@color/secondaryLightTextColor" android:id="@+id/alexaText2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="9dp" android:text="@string/alexaDirectionsText"/>
+                <TextView android:textSize="15sp" android:textColor="#ffffff" android:id="@+id/alexaText3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12dp" android:layout_marginTop="18dp" android:layout_marginRight="12dp" android:text="@string/sampleAlexaPhrase"/>
+            </LinearLayout>
+            <View android:id="@+id/alexaDivider" android:background="@color/lightDividerColor" android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="9dp" android:layout_marginBottom="9dp"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/googleLayout" android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="15sp" android:textColor="#ffffff" android:layout_gravity="center_vertical" android:id="@+id/googleText1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/GoogleAssistant"/>
+                    <ImageView android:id="@+id/googleIcon" android:layout_width="wrap_content" android:layout_height="36dp" android:layout_marginLeft="16dp" app:srcCompat="@drawable/google_icon2" android:scaleType="fitCenter" android:adjustViewBounds="true"/>
+                </LinearLayout>
+                <TextView android:textSize="15sp" android:textColor="@color/secondaryLightTextColor" android:id="@+id/googleText2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="9dp" android:text="@string/googleDirectionsText"/>
+                <TextView android:textSize="15sp" android:textColor="#ffffff" android:id="@+id/googleText3" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="12dp" android:layout_marginTop="18dp" android:layout_marginRight="12dp" android:text="@string/sampleGooglePhrase"/>
+            </LinearLayout>
+            <View android:id="@+id/googleDivider" android:background="@color/lightDividerColor" android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="9dp" android:layout_marginBottom="9dp"/>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:padding="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minWidth="250dp">
+    <TextView android:textSize="18sp" android:textStyle="bold" android:textColor="#000000" android:id="@+id/header" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/FactoryReset"/>
+    <TextView android:textSize="15sp" android:textColor="#444444" android:id="@+id/subHeader" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="20dp" android:text="@string/FactoryResetDialogText"/>
+    <LinearLayout android:gravity="right" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+        <TextView android:textSize="18sp" android:textColor="#075799" android:gravity="center" android:layout_gravity="right" android:id="@+id/cancelTextButton" android:paddingLeft="20dp" android:paddingTop="10dp" android:paddingRight="20dp" android:paddingBottom="10dp" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/Cancel"/>
+        <TextView android:textSize="18sp" android:textColor="#075799" android:gravity="center" android:layout_gravity="right" android:id="@+id/resetTextButton" android:paddingLeft="20dp" android:paddingTop="10dp" android:paddingRight="20dp" android:paddingBottom="10dp" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/ResetDevice"/>
+    </LinearLayout>
+</LinearLayout>

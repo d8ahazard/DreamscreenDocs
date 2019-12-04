@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:paddingTop="10dp" android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView android:textSize="18sp" android:textStyle="normal" android:textColor="#ffffff" android:layout_gravity="left" android:id="@+id/headerText" android:paddingLeft="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/MusicSettings"/>
+        <View android:background="@color/lightDividerColor" android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="9dp" android:layout_marginBottom="9dp"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <TextView android:textSize="15sp" android:textColor="@color/secondaryLightTextColor" android:id="@+id/visualizersText" android:paddingLeft="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/visualizerText"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+                <Space android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1"/>
+                <ImageButton android:layout_gravity="center_horizontal" android:id="@+id/visual1_button" android:padding="4dp" android:layout_width="0dp" android:layout_height="wrap_content" app:srcCompat="@drawable/visualizer1" android:scaleType="fitCenter" android:layout_weight="10" style="?android:attr/borderlessButtonStyle"/>
+                <Space android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1"/>
+                <ImageButton android:layout_gravity="center_horizontal" android:id="@+id/visual2_button" android:padding="4dp" android:layout_width="0dp" android:layout_height="wrap_content" app:srcCompat="@drawable/visualizer2" android:scaleType="fitCenter" android:layout_weight="10" style="?android:attr/borderlessButtonStyle"/>
+                <Space android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+                <Space android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1"/>
+                <ImageButton android:layout_gravity="center_horizontal" android:id="@+id/visual3_button" android:padding="4dp" android:layout_width="0dp" android:layout_height="wrap_content" app:srcCompat="@drawable/visualizer3" android:scaleType="fitCenter" android:layout_weight="10" style="?android:attr/borderlessButtonStyle"/>
+                <Space android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1"/>
+                <ImageButton android:layout_gravity="center_horizontal" android:id="@+id/visual4_button" android:padding="4dp" android:layout_width="0dp" android:layout_height="wrap_content" app:srcCompat="@drawable/visualizer4" android:scaleType="fitCenter" android:layout_weight="10" style="?android:attr/borderlessButtonStyle"/>
+                <Space android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View android:background="@color/lightDividerColor" android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="9dp" android:layout_marginBottom="9dp"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <TextView android:textSize="15sp" android:textColor="@color/secondaryLightTextColor" android:id="@+id/tmbText" android:paddingLeft="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/audioSaturationText"/>
+            <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="5dp">
+                        <TextView android:textSize="15sp" android:textColor="#ffffffff" android:id="@+id/trebleText" android:layout_width="50dp" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="Treble"/>
+                        <ImageButton android:id="@+id/trebleMarker" android:background="@null" android:layout_width="25dp" android:layout_height="25dp" android:layout_marginLeft="25dp" android:layout_marginRight="15dp" app:srcCompat="@drawable/audio_marker" android:adjustViewBounds="false"/>
+                        <SeekBar android:id="@+id/trebleBrightness" android:layout_width="0dp" android:layout_height="wrap_content" android:maxHeight="6dp" android:max="100" android:progressDrawable="@drawable/seekbar_brightness" android:thumb="@drawable/seekbar_silver_thumb" android:layout_weight="1" android:paddingStart="20dp" android:paddingEnd="20dp" android:splitTrack="false"/>
+                        <TextView android:textSize="15sp" android:textColor="@color/lightTextColor50" android:gravity="end" android:layout_gravity="center_vertical" android:id="@+id/trebleValueText" android:layout_width="40dp" android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="5dp">
+                        <TextView android:textSize="15sp" android:textColor="#ffffffff" android:id="@+id/middleText" android:layout_width="50dp" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="Middle"/>
+                        <ImageButton android:id="@+id/middleMarker" android:background="#00000000" android:layout_width="25dp" android:layout_height="25dp" android:layout_marginLeft="25dp" android:layout_marginRight="15dp" app:srcCompat="@drawable/audio_marker"/>
+                        <SeekBar android:id="@+id/middleBrightness" android:layout_width="0dp" android:layout_height="wrap_content" android:maxHeight="6dp" android:max="100" android:progressDrawable="@drawable/seekbar_brightness" android:thumb="@drawable/seekbar_silver_thumb" android:layout_weight="1" android:paddingStart="20dp" android:paddingEnd="20dp" android:splitTrack="false"/>
+                        <TextView android:textSize="15sp" android:textColor="@color/lightTextColor50" android:gravity="end" android:layout_gravity="center_vertical" android:id="@+id/middleValueText" android:layout_width="40dp" android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="5dp">
+                        <TextView android:textSize="15sp" android:textColor="#ffffffff" android:id="@+id/bassText" android:layout_width="50dp" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="Bass"/>
+                        <ImageButton android:id="@+id/bassMarker" android:background="#00000000" android:layout_width="25dp" android:layout_height="25dp" android:layout_marginLeft="25dp" android:layout_marginRight="15dp" app:srcCompat="@drawable/audio_marker"/>
+                        <SeekBar android:id="@+id/bassBrightness" android:layout_width="0dp" android:layout_height="wrap_content" android:maxHeight="6dp" android:max="100" android:progressDrawable="@drawable/seekbar_brightness" android:thumb="@drawable/seekbar_silver_thumb" android:layout_weight="1" android:paddingStart="20dp" android:paddingEnd="20dp" android:splitTrack="false"/>
+                        <TextView android:textSize="15sp" android:textColor="@color/lightTextColor50" android:gravity="end" android:layout_gravity="center_vertical" android:id="@+id/bassValueText" android:layout_width="40dp" android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

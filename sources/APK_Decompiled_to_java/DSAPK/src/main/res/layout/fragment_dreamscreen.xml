@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:layout_width="match_parent" android:layout_height="match_parent" android:animateLayoutChanges="false">
+    <LinearLayout android:orientation="horizontal" android:id="@+id/modesLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+            <ImageButton android:layout_gravity="center_horizontal" android:id="@+id/power_button" android:padding="10dp" android:layout_width="60dp" android:layout_height="60dp" app:srcCompat="@drawable/power_icon" android:scaleType="fitCenter" style="?android:attr/borderlessButtonStyle"/>
+            <TextView android:textSize="@dimen/font_size" android:textStyle="normal" android:textColor="@color/secondaryLightTextColor" android:layout_gravity="center_horizontal" android:id="@+id/power_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Off"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+            <ImageButton android:layout_gravity="center_horizontal" android:id="@+id/video_button" android:padding="10dp" android:layout_width="60dp" android:layout_height="60dp" app:srcCompat="@drawable/video_icon" android:scaleType="fitCenter" style="?android:attr/borderlessButtonStyle"/>
+            <TextView android:textSize="@dimen/font_size" android:textStyle="normal" android:textColor="@color/secondaryLightTextColor" android:layout_gravity="center_horizontal" android:id="@+id/video_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Video"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+            <ImageButton android:layout_gravity="center_horizontal" android:id="@+id/audio_button" android:padding="10dp" android:layout_width="60dp" android:layout_height="60dp" app:srcCompat="@drawable/audio_icon" android:scaleType="fitCenter" style="?android:attr/borderlessButtonStyle"/>
+            <TextView android:textSize="@dimen/font_size" android:textStyle="normal" android:textColor="@color/secondaryLightTextColor" android:layout_gravity="center_horizontal" android:id="@+id/audio_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Music"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+            <ImageButton android:layout_gravity="center_horizontal" android:id="@+id/ambient_button" android:padding="10dp" android:layout_width="60dp" android:layout_height="60dp" app:srcCompat="@drawable/ambient_icon" android:scaleType="fitCenter" style="?android:attr/borderlessButtonStyle"/>
+            <TextView android:textSize="@dimen/font_size" android:textStyle="normal" android:textColor="@color/secondaryLightTextColor" android:layout_gravity="center_horizontal" android:id="@+id/ambient_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ambient"/>
+        </LinearLayout>
+    </LinearLayout>
+    <SeekBar android:id="@+id/SeekBar_Main_Brightness" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxHeight="6dp" android:progressDrawable="@drawable/seekbar_brightness" android:thumb="@drawable/seekbar_silver_thumb" android:layout_below="@+id/modesLayout" android:paddingStart="20dp" android:paddingEnd="20dp" android:splitTrack="false" android:backgroundTint="#00000000"/>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/hdmiLayout" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/SeekBar_Main_Brightness" android:animateLayoutChanges="true" android:layout_alignParentStart="false">
+        <Space android:layout_width="36dp" android:layout_height="1dp"/>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/hdmi1" android:padding="0dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+            <ImageButton android:id="@+id/hdmi1Button" android:padding="10dp" android:layout_width="60dp" android:layout_height="60dp" app:srcCompat="@drawable/ic_settings_input_hdmi_white_48dp" android:scaleType="fitCenter" style="?android:attr/borderlessButtonStyle"/>
+            <EditText android:textSize="@dimen/font_size" android:textColor="@color/secondaryLightTextColor" android:gravity="top" android:layout_gravity="center_horizontal" android:id="@+id/hdmi1Text" android:background="@null" android:focusable="false" android:focusableInTouchMode="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="HDMI 1" android:maxLines="3" android:scrollHorizontally="false" android:maxLength="16" android:inputType="none|text|textCapWords|textMultiLine|textNoSuggestions|textUri|textPassword|textVisiblePassword" android:imeOptions="actionDone" android:textCursorDrawable="@null" android:textAlignment="center"/>
+            <ImageButton android:id="@+id/hdmi1Edit" android:background="#00000000" android:padding="6dp" android:layout_width="36dp" android:layout_height="36dp" android:layout_marginTop="5dp" app:srcCompat="@drawable/ic_create_white_36dp" android:scaleType="fitCenter" android:adjustViewBounds="false"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/hdmi2" android:padding="0dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+            <ImageButton android:id="@+id/hdmi2Button" android:padding="10dp" android:layout_width="60dp" android:layout_height="60dp" app:srcCompat="@drawable/ic_settings_input_hdmi_white_48dp" android:scaleType="fitCenter" style="?android:attr/borderlessButtonStyle"/>
+            <EditText android:textSize="@dimen/font_size" android:textColor="@color/secondaryLightTextColor" android:gravity="top" android:layout_gravity="center_horizontal" android:id="@+id/hdmi2Text" android:background="@null" android:focusable="false" android:focusableInTouchMode="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="HDMI 2" android:maxLines="3" android:scrollHorizontally="false" android:maxLength="16" android:inputType="none|text|textCapWords|textMultiLine|textNoSuggestions|textUri|textPassword|textVisiblePassword" android:imeOptions="actionDone" android:textCursorDrawable="@null" android:textAlignment="center"/>
+            <ImageButton android:id="@+id/hdmi2Edit" android:background="#00000000" android:padding="6dp" android:layout_width="36dp" android:layout_height="36dp" android:layout_marginTop="5dp" app:srcCompat="@drawable/ic_create_white_36dp" android:scaleType="fitCenter" android:adjustViewBounds="false"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/hdmi3" android:padding="0dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+            <ImageButton android:id="@+id/hdmi3Button" android:padding="10dp" android:layout_width="60dp" android:layout_height="60dp" app:srcCompat="@drawable/ic_settings_input_hdmi_white_48dp" android:scaleType="fitCenter" style="?android:attr/borderlessButtonStyle"/>
+            <EditText android:textSize="@dimen/font_size" android:textColor="@color/secondaryLightTextColor" android:gravity="top" android:layout_gravity="center_horizontal" android:id="@+id/hdmi3Text" android:background="@null" android:focusable="false" android:focusableInTouchMode="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="HDMI 3" android:maxLines="3" android:scrollHorizontally="false" android:maxLength="16" android:inputType="none|text|textCapWords|textMultiLine|textNoSuggestions|textUri|textPassword|textVisiblePassword" android:imeOptions="actionDone" android:textCursorDrawable="@null" android:textAlignment="center"/>
+            <ImageButton android:id="@+id/hdmi3Edit" android:background="#00000000" android:padding="6dp" android:layout_width="36dp" android:layout_height="36dp" android:layout_marginTop="5dp" app:srcCompat="@drawable/ic_create_white_36dp" android:scaleType="fitCenter" android:adjustViewBounds="false"/>
+        </LinearLayout>
+        <ImageButton android:id="@+id/userEdittingLockButton" android:background="@null" android:padding="5dp" android:layout_width="36dp" android:layout_height="60dp" android:layout_marginTop="3dp" app:srcCompat="@drawable/ic_lock_outline_white_36dp" android:scaleType="fitCenter" android:adjustViewBounds="false"/>
+    </LinearLayout>
+    <ImageView android:id="@+id/offContainer" android:visibility="gone" android:clickable="false" android:layout_width="match_parent" android:layout_height="match_parent" app:srcCompat="@drawable/turn_on_the_awesome_filler3" android:scaleType="fitCenter" android:adjustViewBounds="true" android:layout_below="@+id/hdmiLayout" style="?android:attr/borderlessButtonStyle"/>
+    <ImageView android:id="@+id/videoContainer" android:visibility="gone" android:clickable="false" android:layout_width="match_parent" android:layout_height="match_parent" app:srcCompat="@drawable/video_mode_filler" android:scaleType="fitCenter" android:adjustViewBounds="true" android:layout_below="@+id/hdmiLayout" style="?android:attr/borderlessButtonStyle"/>
+    <RelativeLayout android:id="@+id/audioContainer" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/hdmiLayout">
+        <ImageView android:id="@+id/audioCenterImage" android:clickable="false" android:layout_width="match_parent" android:layout_height="match_parent" app:srcCompat="@drawable/audio_mode_filler" android:scaleType="fitCenter" android:adjustViewBounds="true" android:maxWidth="200dp" android:layout_centerInParent="true" style="?android:attr/borderlessButtonStyle"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1">
+            <Space android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="0.05"/>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="0.9">
+                <LinearLayout android:orientation="vertical" android:id="@+id/hdmiAudioLayout" android:layout_width="80dp" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                    <ImageButton android:layout_gravity="center_horizontal" android:id="@+id/hdmiAudioButton" android:padding="5dp" android:layout_width="50dp" android:layout_height="50dp" app:srcCompat="@drawable/ic_settings_input_hdmi_white_48dp" android:scaleType="fitCenter" android:adjustViewBounds="true" style="?android:attr/borderlessButtonStyle"/>
+                    <TextView android:textSize="@dimen/font_size" android:textColor="@color/secondaryLightTextColor" android:layout_gravity="center_horizontal" android:id="@+id/hdmiAudioText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="HDMI"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/audioJackLayout" android:layout_width="80dp" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+                    <ImageButton android:layout_gravity="center_horizontal" android:id="@+id/audioJackButton" android:padding="5dp" android:layout_width="50dp" android:layout_height="50dp" app:srcCompat="@drawable/audio_jack_icon" android:scaleType="fitCenter" android:adjustViewBounds="true" style="?android:attr/borderlessButtonStyle"/>
+                    <TextView android:textSize="@dimen/font_size" android:textColor="@color/secondaryLightTextColor" android:layout_gravity="center_horizontal" android:id="@+id/audioJackText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Audio Jack" android:textAlignment="center"/>
+                </LinearLayout>
+            </RelativeLayout>
+            <Space android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="0.05"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/ambientStartContainer" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/hdmiLayout">
+        <ImageView android:id="@+id/ambientCenterImage" android:clickable="false" android:layout_width="match_parent" android:layout_height="match_parent" app:srcCompat="@drawable/ambient_start_filler" android:scaleType="fitCenter" android:adjustViewBounds="true" android:layout_centerInParent="true" style="?android:attr/borderlessButtonStyle"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1">
+            <Space android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="0.05"/>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="0.9">
+                <LinearLayout android:orientation="vertical" android:id="@+id/ambientStartScenesLayout" android:layout_width="80dp" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_centerHorizontal="false">
+                    <ImageButton android:layout_gravity="center_horizontal" android:id="@+id/scenesButton" android:padding="5dp" android:layout_width="50dp" android:layout_height="50dp" app:srcCompat="@drawable/scenes_icon" android:scaleType="fitCenter" android:adjustViewBounds="true" style="?android:attr/borderlessButtonStyle"/>
+                    <TextView android:textSize="@dimen/font_size" android:textColor="@color/secondaryLightTextColor" android:layout_gravity="center_horizontal" android:id="@+id/scenesText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Scenes"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="80dp" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentRight="true">
+                    <ImageButton android:layout_gravity="center_horizontal" android:id="@+id/slidersButton" android:padding="5dp" android:layout_width="50dp" android:layout_height="50dp" app:srcCompat="@drawable/rgb_slider" android:scaleType="fitCenter" android:adjustViewBounds="true" style="?android:attr/borderlessButtonStyle"/>
+                    <TextView android:textSize="@dimen/font_size" android:textColor="@color/secondaryLightTextColor" android:layout_gravity="center_horizontal" android:id="@+id/slidersText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sliders" android:textAlignment="center"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="80dp" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true">
+                    <ImageButton android:layout_gravity="center_horizontal" android:id="@+id/colorWheelButton" android:padding="5dp" android:layout_width="50dp" android:layout_height="50dp" app:srcCompat="@drawable/color_wheel_small" android:scaleType="fitCenter" android:adjustViewBounds="true" style="?android:attr/borderlessButtonStyle"/>
+                    <TextView android:textSize="@dimen/font_size" android:textColor="@color/secondaryLightTextColor" android:layout_gravity="center_horizontal" android:id="@+id/colorWheelText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Color" android:textAlignment="center"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="80dp" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+                    <ImageButton android:layout_gravity="center_horizontal" android:id="@+id/whitesButton" android:padding="5dp" android:layout_width="50dp" android:layout_height="50dp" app:srcCompat="@drawable/whites_icon" android:scaleType="fitCenter" android:adjustViewBounds="true" style="?android:attr/borderlessButtonStyle"/>
+                    <TextView android:textSize="@dimen/font_size" android:textColor="@color/secondaryLightTextColor" android:layout_gravity="center_horizontal" android:id="@+id/whitesText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Whites" android:textAlignment="center"/>
+                </LinearLayout>
+            </RelativeLayout>
+            <Space android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="0.05"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:id="@+id/showContainer" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/hdmiLayout">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingTop="4dp" android:paddingBottom="4dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="1" android:layout_weight="1">
+            <Space android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.05"/>
+            <ImageButton android:id="@+id/random_button" android:clickable="false" android:layout_width="0dp" android:layout_height="wrap_content" app:srcCompat="@drawable/random_icon" android:scaleType="fitCenter" android:adjustViewBounds="true" android:maxWidth="72dp" android:maxHeight="72dp" android:layout_weight="0.25" style="?android:attr/borderlessButtonStyle"/>
+            <Space android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.05"/>
+            <ImageButton android:id="@+id/fire_button" android:layout_width="0dp" android:layout_height="wrap_content" app:srcCompat="@drawable/fire_icon" android:scaleType="fitCenter" android:adjustViewBounds="true" android:maxWidth="72dp" android:maxHeight="72dp" android:layout_weight="0.25" style="?android:attr/borderlessButtonStyle"/>
+            <Space android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.05"/>
+            <ImageButton android:id="@+id/twinkle_button" android:layout_width="0dp" android:layout_height="wrap_content" app:srcCompat="@drawable/twinkle_icon" android:scaleType="fitCenter" android:adjustViewBounds="true" android:maxWidth="72dp" android:maxHeight="72dp" android:layout_weight="0.25" style="?android:attr/borderlessButtonStyle"/>
+            <Space android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.05"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingTop="4dp" android:paddingBottom="4dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="1" android:layout_weight="1">
+            <Space android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.05"/>
+            <ImageButton android:id="@+id/ocean_button" android:layout_width="0dp" android:layout_height="wrap_content" app:srcCompat="@drawable/ocean_icon" android:scaleType="fitCenter" android:adjustViewBounds="true" android:maxWidth="72dp" android:maxHeight="72dp" android:layout_weight="0.25" style="?android:attr/borderlessButtonStyle"/>
+            <Space android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="0.05"/>
+            <ImageButton android:id="@+id/rainbow_button" android:layout_width="0dp" android:layout_height="wrap_content" app:srcCompat="@drawable/rainbow_icon" android:scaleType="fitCenter" android:adjustViewBounds="true" android:maxWidth="72dp" android:maxHeight="72dp" android:layout_weight="0.25" style="?android:attr/borderlessButtonStyle"/>
+            <Space android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="0.05"/>
+            <ImageButton android:id="@+id/july_button" android:layout_width="0dp" android:layout_height="wrap_content" app:srcCompat="@drawable/july" android:scaleType="fitCenter" android:adjustViewBounds="true" android:maxWidth="72dp" android:maxHeight="72dp" android:layout_weight="0.25" style="?android:attr/borderlessButtonStyle"/>
+            <Space android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="0.05"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingTop="4dp" android:paddingBottom="4dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="1" android:layout_weight="1">
+            <Space android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="0.05"/>
+            <ImageButton android:id="@+id/holiday_button" android:layout_width="0dp" android:layout_height="wrap_content" app:srcCompat="@drawable/holiday_icon" android:scaleType="fitCenter" android:adjustViewBounds="true" android:maxWidth="72dp" android:maxHeight="72dp" android:layout_weight="0.25" style="?android:attr/borderlessButtonStyle"/>
+            <Space android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="0.05"/>
+            <ImageButton android:id="@+id/pop_button" android:layout_width="0dp" android:layout_height="wrap_content" app:srcCompat="@drawable/pop_icon" android:scaleType="fitCenter" android:adjustViewBounds="true" android:maxWidth="72dp" android:maxHeight="72dp" android:layout_weight="0.25" style="?android:attr/borderlessButtonStyle"/>
+            <Space android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="0.05"/>
+            <ImageButton android:id="@+id/forest_button" android:layout_width="0dp" android:layout_height="wrap_content" app:srcCompat="@drawable/enchanted_forest" android:scaleType="fitCenter" android:adjustViewBounds="true" android:maxWidth="72dp" android:maxHeight="72dp" android:layout_weight="0.25" style="?android:attr/borderlessButtonStyle"/>
+            <Space android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="0.05"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/slidersContainer2" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1" android:layout_below="@+id/hdmiLayout">
+        <Space android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="0.05"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="0.9" android:layout_centerInParent="true">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1"/>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                <com.lab714.dreamscreenv2.layout.VerticalSeekBar2 android:id="@+id/redSeekBar2" android:layout_width="wrap_content" android:layout_height="0dp" android:maxHeight="6dp" android:max="255" android:indeterminate="false" android:progressDrawable="@drawable/seekbar_red" android:thumb="@drawable/seekbar_silver_thumb_large" android:layout_weight="1" android:layoutDirection="ltr" android:paddingStart="25dp" android:paddingEnd="25dp" android:splitTrack="false"/>
+                <TextView android:textSize="@dimen/font_size" android:textColor="@color/secondaryLightTextColor" android:gravity="center" android:id="@+id/redText2" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Red"/>
+                <TextView android:textSize="@dimen/font_size" android:textColor="@color/lightTextColor50" android:gravity="center" android:id="@+id/redValueText2" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                <com.lab714.dreamscreenv2.layout.VerticalSeekBar2 android:id="@+id/greenSeekBar2" android:layout_width="wrap_content" android:layout_height="0dp" android:maxHeight="6dp" android:max="255" android:progressDrawable="@drawable/seekbar_green" android:thumb="@drawable/seekbar_silver_thumb_large" android:layout_weight="1" android:layoutDirection="ltr" android:paddingStart="25dp" android:paddingEnd="25dp" android:splitTrack="false"/>
+                <TextView android:textSize="@dimen/font_size" android:textColor="@color/secondaryLightTextColor" android:id="@+id/greenText2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Green"/>
+                <TextView android:textSize="@dimen/font_size" android:textColor="@color/lightTextColor50" android:id="@+id/greenValueText2" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                <com.lab714.dreamscreenv2.layout.VerticalSeekBar2 android:id="@+id/blueSeekBar2" android:layout_width="wrap_content" android:layout_height="0dp" android:maxHeight="6dp" android:max="255" android:progressDrawable="@drawable/seekbar_blue" android:thumb="@drawable/seekbar_silver_thumb_large" android:layout_weight="1" android:layoutDirection="ltr" android:paddingStart="25dp" android:paddingEnd="25dp" android:splitTrack="false"/>
+                <TextView android:textSize="@dimen/font_size" android:textColor="@color/secondaryLightTextColor" android:gravity="center" android:id="@+id/blueText2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Blue"/>
+                <TextView android:textSize="@dimen/font_size" android:textColor="@color/lightTextColor50" android:gravity="center" android:id="@+id/blueValueText2" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1">
+                <ImageView android:id="@+id/picker_current_sliders2" android:visibility="visible" android:layout_width="50dp" android:layout_height="50dp" android:layout_marginTop="25dp" app:srcCompat="@drawable/picker_current" android:adjustViewBounds="false" android:layout_toRightOf="@+id/blueSeekBar" android:layout_alignParentTop="false" android:layout_alignParentRight="false" android:layout_alignParentBottom="false" android:layout_alignParentEnd="false"/>
+            </LinearLayout>
+        </LinearLayout>
+        <Space android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="0.05"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/colorWheelContainer" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1" android:layout_below="@+id/hdmiLayout" android:animateLayoutChanges="false">
+        <Space android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="0.05"/>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="0.9">
+            <ImageView android:layout_gravity="top" android:id="@+id/colorWheel" android:padding="15dp" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="match_parent" app:srcCompat="@drawable/color_wheel1" android:scaleType="centerInside" android:adjustViewBounds="true" android:maxHeight="500dp" android:layout_alignParentBottom="false" android:layout_centerInParent="true"/>
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignLeft="@+id/colorWheel" android:layout_alignTop="@+id/colorWheel" android:layout_alignRight="@+id/colorWheel" android:layout_alignBottom="@+id/colorWheel">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="0.2">
+                    <Space android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.8"/>
+                    <ImageView android:id="@+id/picker_current" android:visibility="visible" android:layout_width="0dp" android:layout_height="match_parent" app:srcCompat="@drawable/picker_current" android:adjustViewBounds="false" android:layout_weight="0.2" android:layout_alignParentTop="false" android:layout_alignParentRight="false" android:layout_alignParentEnd="false"/>
+                </LinearLayout>
+                <Space android:layout_width="wrap_content" android:layout_height="0dp" android:layout_weight="0.8"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <Space android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="0.05"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/whitesWheelContainer" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1" android:layout_below="@+id/hdmiLayout" android:animateLayoutChanges="false">
+        <Space android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="0.05"/>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="0.9">
+            <ImageView android:layout_gravity="top" android:id="@+id/whitesWheel" android:padding="15dp" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="match_parent" app:srcCompat="@drawable/whites_wheel" android:scaleType="centerInside" android:adjustViewBounds="true" android:maxHeight="500dp" android:layout_alignParentBottom="false" android:layout_centerInParent="true"/>
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignLeft="@+id/whitesWheel" android:layout_alignTop="@+id/whitesWheel" android:layout_alignRight="@+id/whitesWheel" android:layout_alignBottom="@+id/whitesWheel">
+                <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="0.2">
+                    <Space android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.8"/>
+                    <ImageView android:id="@+id/whitesCurrent" android:visibility="visible" android:layout_width="0dp" android:layout_height="match_parent" app:srcCompat="@drawable/picker_current" android:adjustViewBounds="false" android:layout_weight="0.2" android:layout_alignParentTop="false" android:layout_alignParentRight="false" android:layout_alignParentEnd="false"/>
+                </LinearLayout>
+                <Space android:layout_width="wrap_content" android:layout_height="0dp" android:layout_weight="0.8"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <Space android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="0.05"/>
+    </LinearLayout>
+</RelativeLayout>

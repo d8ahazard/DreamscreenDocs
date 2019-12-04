@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/imageView9" android:layout_width="match_parent" android:layout_height="wrap_content" android:adjustViewBounds="true" android:layout_centerInParent="true" app:srcCompat="@drawable/loading_ellipse2"/>
+    <RelativeLayout android:id="@+id/progressLayout" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_centerInParent="true">
+        <ProgressBar android:id="@+id/searchingProgressBar" android:layout_width="150dp" android:layout_height="150dp" android:indeterminateDrawable="@drawable/progressbar_custom2" android:layout_centerInParent="true" style="?android:attr/progressBarStyleLarge"/>
+        <ImageView android:id="@+id/turnOnTheAwesome" android:padding="20dp" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/turn_on_the_awesome2" android:scaleType="fitCenter" android:adjustViewBounds="true" android:maxWidth="400dp" android:layout_below="@+id/searchingProgressBar" android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/wifiLayout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <TextView android:textSize="25sp" android:textColor="@color/primaryLightTextColor" android:id="@+id/wifiErrorText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="20dp" android:text="@string/WiFiError" android:textAlignment="center"/>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/wifiSubLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="20dp">
+            <ImageButton android:id="@+id/wifiButton" android:background="#00000000" android:padding="3dp" android:layout_width="48dp" android:layout_height="wrap_content" android:layout_marginBottom="6dp" app:srcCompat="@drawable/connectivity_option1" android:scaleType="fitCenter" android:adjustViewBounds="true"/>
+            <TextView android:textSize="16sp" android:textColor="@color/secondaryLightTextColor" android:id="@+id/wifiText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/WiFiErrorSub" android:textAlignment="center"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/demoLayout2" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageButton android:id="@+id/demoButton2" android:background="#00000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="6dp" app:srcCompat="@drawable/ic_star_white_48dp" android:scaleType="fitCenter" android:adjustViewBounds="true"/>
+            <TextView android:textSize="16sp" android:textColor="@color/secondaryLightTextColor" android:id="@+id/demoText2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/DemotheApp" android:textAlignment="center"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/errorLayouts" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+        <TextView android:textSize="25sp" android:textColor="@color/primaryLightTextColor" android:layout_gravity="center_horizontal" android:id="@+id/statusText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="20dp" android:textAlignment="center"/>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/refreshLayout" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageButton android:id="@+id/refreshButton" android:background="#00000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="6dp" app:srcCompat="@drawable/ic_refresh_white_48dp" android:scaleType="fitCenter" android:adjustViewBounds="true"/>
+            <TextView android:textSize="16sp" android:textColor="@color/secondaryLightTextColor" android:id="@+id/refreshText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/SearchAgain"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/addNewDeviceLayout" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="20dp">
+            <ImageButton android:id="@+id/addNewDeviceButton" android:background="#00000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="6dp" app:srcCompat="@drawable/ic_add_circle_outline_white_48dp" android:scaleType="fitCenter" android:adjustViewBounds="true"/>
+            <TextView android:textSize="16sp" android:textColor="@color/secondaryLightTextColor" android:id="@+id/addNewDeviceText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/AddNewText" android:textIsSelectable="false"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/demoLayout" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageButton android:id="@+id/demoButton" android:background="#00000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="6dp" app:srcCompat="@drawable/ic_star_white_48dp" android:scaleType="fitCenter" android:adjustViewBounds="true"/>
+            <TextView android:textSize="16sp" android:textColor="@color/secondaryLightTextColor" android:id="@+id/demoText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/DemotheApp" android:textAlignment="center"/>
+        </LinearLayout>
+        <TextView android:textSize="25sp" android:textColor="@color/primaryLightTextColor" android:id="@+id/spacerText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:textAlignment="center"/>
+    </LinearLayout>
+    <TextView android:textSize="12sp" android:textColor="@color/secondaryLightTextColor" android:id="@+id/ssidText" android:padding="2dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true"/>
+    <TextView android:textSize="12sp" android:textColor="@color/secondaryLightTextColor" android:id="@+id/appVersionText" android:padding="2dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_alignParentBottom="true"/>
+</RelativeLayout>

@@ -1,0 +1,125 @@
+package com.philips.lighting.hue.sdk.wrapper.domain;
+
+import androidx.core.view.InputDeviceCompat;
+
+public enum DomainType {
+    UNKNOWN(0),
+    CLIP_RESPONSE(1),
+    ERROR(2),
+    CLIP_ERROR(3),
+    HTTP_ERROR(4),
+    HTTP_REQUEST_ERROR(5),
+    PORTAL_CONNECTION_ERROR(6),
+    PUSH_NOTIFICATION_ERROR(7),
+    SDK_ERROR(8),
+    BRIDGE_VERSION(11),
+    REMOTE_BRIDGE(12),
+    RESOURCE(21),
+    DEVICE(22),
+    COMPOUND_DEVICE(23, 22),
+    DEVICE_SEARCHING_STATUS(24),
+    WHITELIST_ENTRY(101, 21),
+    GROUP(102, 21),
+    SCENE(103, 21),
+    RULE(104, 21),
+    ACTION(106),
+    SCHEDULE(107, 21),
+    TIMER(108, 21),
+    SCENE_APP_DATA(109, 103),
+    RESOURCE_LINK(110, 21),
+    TIMEZONES(111, 21),
+    CAPABILITIES(112, 21),
+    RESOURCE_CAPABILITIES(113, 21),
+    SCENE_CAPABILITIES(114, 113),
+    SENSOR_CAPABILITIES(115, 113),
+    RULE_CAPABILITIES(116, 113),
+    LIGHT_GROUP(121),
+    LUMINAIRE_GROUP(122),
+    LIGHT_SOURCE_GROUP(123),
+    SCENE_ACTION(141),
+    LIGHT_ACTION(142),
+    CLIP_ACTION(143),
+    CLIP_CONDITION(144),
+    GROUP_STATE(160),
+    BRIDGE(201),
+    LIGHT_POINT(202, 22),
+    SENSOR(203, 22),
+    SWITCH(204, 203),
+    OPEN_CLOSE_SENSOR(231, 203),
+    GENERIC_FLAG_SENSOR(232, 203),
+    GENERIC_STATUS_SENSOR(233, 203),
+    PRESENCE_SENSOR(234, 203),
+    GEOFENCE_SENSOR(235, 203),
+    TEMPERATURE_SENSOR(236, 203),
+    HUMIDITY_SENSOR(237, 203),
+    DAYLIGHT_SENSOR(238, 203),
+    LIGHT_LEVEL_SENSOR(239, 203),
+    MULTI_SOURCE_LUMINAIRE(251, 202),
+    LIGHT_SOURCE(252, 202),
+    FACTORY_LUMINAIRE(253, 202),
+    USER_CREATED_LUMINAIRE(254, 202),
+    COMPOUND_LIGHT(255, 202),
+    COMPOUND_SENSOR(256, 203),
+    PRESENCE_LIGHT_LEVEL_TEMPERATURE_SENSOR(InputDeviceCompat.SOURCE_KEYBOARD, 203),
+    DEVICE_STATE(300),
+    BRIDGE_STATE(301, 300),
+    LIGHT_STATE(302, 300),
+    SENSOR_STATE(303, 300),
+    SWITCH_STATE(304, 303),
+    OPEN_CLOSE_SENSOR_STATE(331, 303),
+    GENERIC_FLAG_SENSOR_STATE(332, 303),
+    GENERIC_STATUS_SENSOR_STATE(333, 303),
+    PRESENCE_SENSOR_STATE(334, 303),
+    GEOFENCE_SENSOR_STATE(335, 303),
+    TEMPERATURE_SENSOR_STATE(336, 303),
+    HUMIDITY_SENSOR_STATE(337, 303),
+    DAYLIGHT_SENSOR_STATE(338, 303),
+    LIGHT_LEVEL_SENSOR_STATE(339, 303),
+    DEVICE_CONFIGURATION(400),
+    BRIDGE_CONFIGURATION(401, 400),
+    LIGHT_CONFIGURATION(402, 400),
+    SENSOR_CONFIGURATION(403, 400),
+    SWITCH_CONFIGURATION(404, 403),
+    DIMMABLE_LIGHT_CONFIGURATION(411, 402),
+    COLOR_LIGHT_CONFIGURATION(412, 402),
+    OPEN_CLOSE_SENSOR_CONFIGURATION(421, 403),
+    GENERIC_FLAG_SENSOR_CONFIGURATION(422, 403),
+    GENERIC_STATUS_SENSOR_CONFIGURATION(423, 403),
+    PRESENCE_SENSOR_CONFIGURATION(434, 403),
+    GEOFENCE_SENSOR_CONFIGURATION(425, 403),
+    TEMPERATURE_SENSOR_CONFIGURATION(426, 403),
+    HUMIDITY_SENSOR_CONFIGURATION(427, 403),
+    DAYLIGHT_SENSOR_CONFIGURATION(428, 403),
+    LIGHT_LEVEL_SENSOR_CONFIGURATION(429, 403);
+    
+    private int superTypeValue;
+    private int value;
+
+    private DomainType(int value2) {
+        this.value = value2;
+        this.superTypeValue = 0;
+    }
+
+    private DomainType(int value2, int superType) {
+        this.value = value2;
+        this.superTypeValue = superType;
+    }
+
+    public int getValue() {
+        return this.value;
+    }
+
+    public DomainType getSuperType() {
+        return fromValue(this.superTypeValue);
+    }
+
+    public static DomainType fromValue(int value2) {
+        DomainType[] values;
+        for (DomainType type : values()) {
+            if (type.getValue() == value2) {
+                return type;
+            }
+        }
+        return UNKNOWN;
+    }
+}

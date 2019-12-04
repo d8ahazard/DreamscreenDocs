@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AlertDialogCustom">
+        <item name="android:textColorPrimary">@color/colorPrimary</item>
+        <item name="android:windowBackground">@color/colorPrimary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="AppTheme">
+        <item name="android:windowDisablePreview">true</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay">
+    </style>
+    <style name="AppTheme.PopupOverlay">
+    </style>
+    <style name="checkBoxStyle">
+        <item name="android:textColorSecondary">@color/primaryLightTextColor</item>
+        <item name="colorAccent">@color/primaryLightTextColor</item>
+    </style>
+</resources>

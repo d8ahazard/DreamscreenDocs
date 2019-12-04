@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/widget_background" android:padding="8dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <ImageView android:id="@+id/iconImage" android:layout_width="0dp" android:layout_height="wrap_content" app:srcCompat="@drawable/dreamscreen_logo_shadowed" android:scaleType="fitCenter" android:adjustViewBounds="true" android:maxHeight="60dp" android:layout_weight="1"/>
+    <ImageButton android:id="@+id/refreshButton" android:background="@null" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginLeft="8dp" app:srcCompat="@drawable/ic_refresh_white_48dp" android:scaleType="centerInside" android:tint="#6e717c"/>
+    <ImageButton android:id="@+id/modeButton" android:background="@drawable/widget_mode_button_background" android:layout_width="60dp" android:layout_height="60dp" android:layout_marginLeft="8dp" android:scaleType="centerInside"/>
+    <ImageButton android:id="@+id/hdmiButton" android:background="@drawable/widget_source_button_background" android:layout_width="60dp" android:layout_height="60dp" android:layout_marginLeft="8dp" android:scaleType="centerInside"/>
+</LinearLayout>

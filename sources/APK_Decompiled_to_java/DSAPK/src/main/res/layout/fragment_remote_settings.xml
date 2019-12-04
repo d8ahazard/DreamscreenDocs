@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:scrollbarSize="2dp" android:scrollbarThumbVertical="@drawable/scrollbar" android:scrollbarStyle="outsideOverlay" android:layout_width="match_parent" android:layout_height="match_parent" android:fadeScrollbars="false">
+        <LinearLayout android:orientation="vertical" android:id="@+id/rootLayout" android:paddingTop="10dp" android:layout_width="match_parent" android:layout_height="match_parent" android:animateLayoutChanges="true">
+            <TextView android:textSize="18sp" android:textStyle="normal" android:textColor="#ffffff" android:layout_gravity="left" android:id="@+id/headerText" android:paddingLeft="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/IRRemoteSettings"/>
+            <View android:background="@color/lightDividerColor" android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="9dp" android:layout_marginBottom="9dp"/>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/irEnabledLayout" android:padding="5dp" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="15sp" android:textColor="#ffffff" android:layout_gravity="center" android:id="@+id/irEnabledText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/IRRemoteEnabled"/>
+                <ImageButton android:id="@+id/irEnabledHelp" android:background="#00000000" android:padding="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_help_outline_white_18dp" android:adjustViewBounds="true"/>
+                <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+                <ImageView android:id="@+id/irEnabledToggle" android:layout_width="50dp" android:layout_height="wrap_content" android:layout_marginRight="15dp" app:srcCompat="@drawable/toggle2_off" android:adjustViewBounds="true"/>
+            </LinearLayout>
+            <View android:background="@color/lightDividerColor" android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="9dp" android:layout_marginBottom="9dp"/>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/customCommandsLayout" android:padding="5dp" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="15sp" android:textColor="#ffffff" android:layout_gravity="center" android:id="@+id/customCommandsText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/CustomIRCommands"/>
+                <ImageButton android:id="@+id/customCommandsHelp" android:background="#00000000" android:padding="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_help_outline_white_18dp" android:adjustViewBounds="true"/>
+                <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+                <RelativeLayout android:id="@+id/addCustomCommandButtonLayout" android:paddingLeft="15dp" android:paddingTop="8dp" android:paddingRight="15dp" android:paddingBottom="8dp" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="15sp" android:textColor="@color/secondaryLightTextColor" android:id="@+id/addText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Add" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
+                    <ImageView android:id="@+id/addCustomCommandButton" android:background="@null" android:layout_width="18dp" android:layout_height="18dp" android:layout_marginLeft="4dp" app:srcCompat="@drawable/ic_add_circle_outline_white_18dp" android:layout_toRightOf="@+id/addText" android:layout_centerVertical="true" android:alpha="0.7"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/manifestEntryLayout" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <View android:background="@color/lightDividerColor" android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="9dp" android:layout_marginBottom="9dp"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/harmonyLayout" android:padding="5dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <TextView android:textSize="15sp" android:textColor="#ffffff" android:layout_gravity="center_vertical" android:id="@+id/harmonyText1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/LogitechHarmony"/>
+                    <ImageView android:id="@+id/harmonyIcon" android:layout_width="wrap_content" android:layout_height="36dp" android:layout_marginLeft="16dp" app:srcCompat="@drawable/harmony_icon" android:scaleType="fitCenter" android:adjustViewBounds="true"/>
+                </LinearLayout>
+                <TextView android:textSize="15sp" android:textColor="@color/secondaryLightTextColor" android:id="@+id/harmonyText2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="9dp" android:text="@string/harmonyDirectionsText"/>
+            </LinearLayout>
+            <View android:id="@+id/harmonyDivider" android:background="@color/lightDividerColor" android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="9dp" android:layout_marginBottom="9dp"/>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

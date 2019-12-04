@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/rootView" android:background="#000000" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/imgLogo" android:paddingLeft="8dp" android:paddingRight="8dp" android:layout_width="match_parent" android:layout_height="60dp" app:srcCompat="@drawable/dreamscreen_logo2" android:adjustViewBounds="true"/>
+    <androidx.drawerlayout.widget.DrawerLayout android:id="@+id/drawer_layout" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:background="@drawable/gray_gradient" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="?attr/actionBarSize" android:title="" android:subtitle="" app:contentInsetEnd="0dp" app:contentInsetLeft="0dp" app:contentInsetRight="0dp" app:contentInsetStart="0dp" app:contentInsetStartWithNavigation="0dp" app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:gravity="center" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+                        <ImageView android:gravity="left" android:id="@+id/toolbarGroupIcon" android:visibility="gone" android:layout_width="24dp" android:layout_height="24dp" android:layout_marginRight="5dp" app:srcCompat="@drawable/drawer_app_groupoption2_128px" android:scaleType="fitCenter" android:adjustViewBounds="true"/>
+                        <TextView android:textSize="24sp" android:textColor="#ffffff" android:id="@+id/toolbarTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:maxLength="16" android:textAlignment="center"/>
+                    </LinearLayout>
+                    <ImageButton android:id="@+id/wifiConnectivityButton" android:visibility="gone" android:layout_width="47dp" android:layout_height="47dp" app:srcCompat="@drawable/connectivity_option1" android:scaleType="fitCenter" android:adjustViewBounds="true" style="?android:attr/borderlessButtonStyle"/>
+                    <ImageButton android:id="@+id/settingsButton" android:padding="12dp" android:visibility="invisible" android:layout_width="45dp" android:layout_height="45dp" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" app:srcCompat="@drawable/settings_icon" android:scaleType="fitCenter" android:adjustViewBounds="true" style="?android:attr/borderlessButtonStyle"/>
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+            <FrameLayout android:id="@+id/frameLayout" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        </LinearLayout>
+        <ScrollView android:scrollbarSize="2dp" android:scrollbarThumbVertical="@drawable/scrollbar" android:layout_gravity="start" android:id="@+id/drawerScrollView" android:background="@drawable/drawer_background_gradient" android:paddingTop="2dp" android:paddingRight="2dp" android:paddingBottom="2dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="48dp" android:fillViewport="true" android:fadeScrollbars="false">
+            <LinearLayout android:orientation="vertical" android:id="@+id/drawerLinearLayout" android:visibility="visible" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </ScrollView>
+    </androidx.drawerlayout.widget.DrawerLayout>
+</LinearLayout>

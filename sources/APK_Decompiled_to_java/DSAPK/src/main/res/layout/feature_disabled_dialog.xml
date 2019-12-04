@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:padding="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minWidth="250dp">
+    <TextView android:textSize="18sp" android:textStyle="bold" android:textColor="#000000" android:id="@+id/addNewHeader" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/FeatureDisabledforSideKick"/>
+    <TextView android:textSize="15sp" android:textColor="#444444" android:id="@+id/textView4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_marginTop="15dp" android:text="@string/FeatureDisabledforSideKickSub"/>
+    <LinearLayout android:gravity="right|center_vertical|center_horizontal|center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+        <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+        <TextView android:textSize="18sp" android:textColor="#075799" android:gravity="center" android:id="@+id/addText" android:paddingLeft="20dp" android:paddingTop="10dp" android:paddingRight="20dp" android:paddingBottom="10dp" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/OK"/>
+    </LinearLayout>
+</LinearLayout>
